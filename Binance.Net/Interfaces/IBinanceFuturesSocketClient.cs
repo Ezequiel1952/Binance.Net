@@ -196,7 +196,7 @@ namespace Binance.Net.Interfaces
         /// <param name="symbol">The symbol to subscribe to</param>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
-        CallResult<UpdateSubscription> SubscribeToSymbolTickerUpdates(string symbol, Action<BinanceStreamTick> onMessage);
+        CallResult<UpdateSubscription> SubscribeToSymbolTickerUpdates(string symbol, Action<BinanceFuturesStreamTick> onMessage);
 
         /// <summary>
         /// Subscribes to ticker updates stream for a specific symbol
@@ -204,7 +204,7 @@ namespace Binance.Net.Interfaces
         /// <param name="symbol">The symbol to subscribe to</param>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
-        Task<CallResult<UpdateSubscription>> SubscribeToSymbolTickerUpdatesAsync(string symbol, Action<BinanceStreamTick> onMessage);
+        Task<CallResult<UpdateSubscription>> SubscribeToSymbolTickerUpdatesAsync(string symbol, Action<BinanceFuturesStreamTick> onMessage);
 
         /// <summary>
         /// Subscribes to ticker updates stream for a specific symbol
@@ -212,7 +212,7 @@ namespace Binance.Net.Interfaces
         /// <param name="symbol">The symbol to subscribe to</param>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
-        CallResult<UpdateSubscription> SubscribeToSymbolTickerUpdates(IEnumerable<string> symbol, Action<BinanceStreamTick> onMessage);
+        CallResult<UpdateSubscription> SubscribeToSymbolTickerUpdates(IEnumerable<string> symbol, Action<BinanceFuturesStreamTick> onMessage);
 
         /// <summary>
         /// Subscribes to ticker updates stream for a specific symbol
@@ -220,21 +220,21 @@ namespace Binance.Net.Interfaces
         /// <param name="symbol">The symbol to subscribe to</param>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
-        Task<CallResult<UpdateSubscription>> SubscribeToSymbolTickerUpdatesAsync(IEnumerable<string> symbol, Action<BinanceStreamTick> onMessage);
+        Task<CallResult<UpdateSubscription>> SubscribeToSymbolTickerUpdatesAsync(IEnumerable<string> symbol, Action<BinanceFuturesStreamTick> onMessage);
 
         /// <summary>
         /// Subscribes to ticker updates stream for all symbols
         /// </summary>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
-        CallResult<UpdateSubscription> SubscribeToAllTickerUpdates(Action<IEnumerable<BinanceStreamTick>> onMessage);
+        CallResult<UpdateSubscription> SubscribeToAllTickerUpdates(Action<IEnumerable<BinanceFuturesStreamTick>> onMessage);
 
         /// <summary>
         /// Subscribes to ticker updates stream for all symbols
         /// </summary>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
-        Task<CallResult<UpdateSubscription>> SubscribeToAllTickerUpdatesAsync(Action<IEnumerable<BinanceStreamTick>> onMessage);
+        Task<CallResult<UpdateSubscription>> SubscribeToAllTickerUpdatesAsync(Action<IEnumerable<BinanceFuturesStreamTick>> onMessage);
 
         /// <summary>
         /// Subscribes to the book ticker update stream for the provided symbol

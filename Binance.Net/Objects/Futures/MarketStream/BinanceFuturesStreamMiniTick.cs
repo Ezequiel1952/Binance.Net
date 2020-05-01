@@ -9,7 +9,7 @@ namespace Binance.Net.Objects.Futures.MarketStream
     /// <summary>
     /// TODO
     /// </summary>
-    public class BinanceFuturesStreamMiniTick : IBinanceMiniTick
+    public class BinanceFuturesStreamMiniTick : IBinanceFuturesMiniTick
     {
         /// <summary>
         /// Symbol
